@@ -776,6 +776,8 @@ class _ClickableState extends State<Clickable> {
       case TargetPlatform.macOS:
       case TargetPlatform.windows:
         return Future<void>.value();
+      default:
+        return SystemSound.play(SystemSoundType.click);
     }
   }
 
